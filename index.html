@@ -2,24 +2,125 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <!-- Importante incluir esta meta etiqueta para que el diseño se adapte lo mejor posible -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejemplo Diseño Responsivo</title>
+    <title>Lorem ipsum</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* Estilos para la barra de navegación */
+      .navbar {
+        background-color: #333;
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        background-color: #555;
+      }
+
+      .navbar-search-lg {
+        display: none;
+      }
+
+      .navbar-search-sm {
+        display: none;
+      }
+
+      /* Estilos para el botón del menú desplegable en tamaños md y sm */
+      .navbar-menu-button {
+        display: none;
+        float: right;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Estilos para el menú desplegable en tamaños md y sm */
+      .navbar-menu-md-sm {
+        display: none;
+        float: right;
+      }
+
+      /* Media Query para tamaños medianos y pequeños (md y sm) */
+      @media screen and (max-width: 992px) {
+        .navbar a {
+          display: none;
+        }
+
+        .navbar-search-lg {
+          display: none;
+        }
+
+        .navbar-search-sm {
+          display: block;
+        }
+
+        .navbar-menu-button {
+          display: block;
+        }
+
+        .navbar-menu-md-sm {
+          display: none;
+        }
+      }
+
+      /* Media Query para tamaños grandes (lg) */
+      @media screen and (min-width: 992px) {
+        .navbar a {
+          display: block;
+        }
+
+        .navbar-search-lg {
+          display: block;
+        }
+
+        .navbar-search-sm {
+          display: none;
+        }
+
+        .navbar-menu-button {
+          display: none;
+        }
+
+        .navbar-menu-md-sm {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Ejemplo de Diseño Responsive</h1>
-    <div class="grid-container">
-      <p>
-        Para ver cómo el diseño se adapta, puedes reducir el tamaño de la
-        ventana o utilizar las "Herramientas del Desarrollador" para poder
-        elegir una resolución distinta a la de tu pantalla.
-      </p>
-      <div class="flex-container">
-        <!-- El contenido de aquí se agrega mediante JS -->
+    <div class="navbar">
+      <a href="#dolor">Dolor</a>
+      <a href="#sit">Sit</a>
+      <a href="#amet">Amet</a>
+      <div class="navbar-search-lg"> <!-- Botón de búsqueda para LG -->
+        <input type="text" placeholder="Buscar">
+        <button type="submit">Buscar</button>
+      </div>
+      <div class="navbar-menu-button" id="menu-button">Menú</div> <!-- Botón de menú para MD y SM -->
+      <div class="navbar-menu-md-sm" id="menu-md-sm">
+        <a href="#dolor">Dolor</a>
+        <a href="#sit">Sit</a>
+        <a href="#amet">Amet</a>
       </div>
     </div>
-
+    <h1>Lorem ipsum...</h1>
+    <div class="carousel" id="text-carousel">
+      <!-- El texto del carrusel se generará con JavaScript -->
+    </div>
+    <div class="grid-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis, erat id tristique lacinia, velit velit tincidunt lectus, ut aliquam massa orci in erat. Nullam quis libero in nisi lacinia sagittis. Quisque feugiat malesuada ipsum, id venenatis ante tincidunt ac. Vivamus luctus ut nunc in hendrerit. Sed bibendum id augue at aliquam. Sed convallis urna a leo scelerisque bibendum. Sed eget varius urna, eu egestas massa. Nunc non condimentum erat. Cras sit amet vehicula orci. Integer scelerisque nunc a bibendum sagittis.
+      </p>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

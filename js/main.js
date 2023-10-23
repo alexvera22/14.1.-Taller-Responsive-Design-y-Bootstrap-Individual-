@@ -1,10 +1,17 @@
-// Este script tiene la única funcionalidad de agregar cuadrados a la página de forma dinámica
+// Textos para el carrusel
+ const carouselTexts = [
+  "Lorem ipsum dolore",
+  "consectetur adipiscing elit",
+  "Vestibulum facilisis",
+];
 
-const items = document.querySelector(".flex-container");
+const carouselElement = document.getElementById("text-carousel");
 
-for (let i = 1; i <= 20; i++) {
-  const square = document.createElement("div");
-  square.appendChild(document.createTextNode(i));
-  square.classList.add("square");
-  items.appendChild(square);
+let currentIndex = 0;
+
+function updateCarousel() {
+  carouselElement.innerHTML = carouselTexts[currentIndex];
+  currentIndex = (currentIndex + 1) % carouselTexts.length;
 }
+
+setInterval(updateCarousel, 2000);
